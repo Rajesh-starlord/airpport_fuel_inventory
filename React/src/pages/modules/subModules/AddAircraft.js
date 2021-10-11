@@ -34,28 +34,28 @@ class AddAircraft extends React.Component {
                                 <label htmlFor="aircraftNo">Aircraft Number</label>
                                 <input type="text" className="form-control" id="aircraftNo" 
                                     name="aircraftNo" aria-describedby="emailHelp" 
-                                    value={this.state.aircraftNo} placeholder="Enter Airport"
+                                    value={this.state.aircraftNo} placeholder="Enter Aircraft Number"
                                     onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="airline">Airline</label>
                                 <input type="text" className="form-control" id="airline" 
                                     name="airline" aria-describedby="emailHelp" 
-                                    value={this.state.airline} placeholder="Enter Airport" 
+                                    value={this.state.airline} placeholder="Enter Airline" 
                                     onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="source">Source</label>
                                 <input type="text" className="form-control" id="source" 
                                     name="source" aria-describedby="emailHelp" 
-                                    value={this.state.source} placeholder="Enter Airport" 
+                                    value={this.state.source} placeholder="Enter source" 
                                     onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="destination">Destination</label>
                                 <input type="text" className="form-control" id="destination" 
                                     name="destination" aria-describedby="emailHelp" 
-                                    value={this.state.destination} placeholder="Enter Airport" 
+                                    value={this.state.destination} placeholder="Enter destination" 
                                     onChange={this.handleChange} required/>
                             </div>
 

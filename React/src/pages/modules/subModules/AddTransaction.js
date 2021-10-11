@@ -82,7 +82,7 @@ class AddTransaction extends React.Component {
                                 <label htmlFor="aircraftId">Aircraft</label>
                                 <select className="form-control" id="aircraftId" 
                                     name="aircraftId" aria-describedby="emailHelp" 
-                                    value={this.state.aircraftId} placeholder="Enter Airport"
+                                    value={this.state.aircraftId} placeholder="Enter Aircraft"
                                     onChange={this.handleChange} >
                                         <option value="">---select---</option>
                                         {
@@ -96,7 +96,7 @@ class AddTransaction extends React.Component {
                                 <label htmlFor="quantity">Quantity</label>
                                 <input type="number" className="form-control" id="quantity" 
                                     name="quantity" aria-describedby="emailHelp" 
-                                    value={this.state.quantity} placeholder="Enter Airport" 
+                                    value={this.state.quantity} placeholder="Enter quantity" 
                                     onChange={this.handleChange} required/>
                             </div>
 

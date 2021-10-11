@@ -39,14 +39,14 @@ class AddAirport extends React.Component {
                                 <label htmlFor="fuelCapacity">Fueal Capacity</label>
                                 <input type="number" className="form-control" id="fuelCapacity" 
                                     name="fuelCapacity" aria-describedby="emailHelp" 
-                                    value={this.state.fuelCapacity} placeholder="Enter Airport" 
+                                    value={this.state.fuelCapacity} placeholder="Enter Fuel Capacity" 
                                     onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fuelAvailable">Fuel Available</label>
                                 <input type="number" className="form-control" id="fuelAvailable" 
                                     name="fuelAvailable" aria-describedby="emailHelp" 
-                                    value={this.state.fuelAvailable} placeholder="Enter Airport" 
+                                    value={this.state.fuelAvailable} placeholder="Enter Fuel Available" 
                                     onChange={this.handleChange} />
                             </div>
 

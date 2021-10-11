@@ -46,14 +46,14 @@ class AddRevTransaction extends React.Component {
                                 <label htmlFor="transIdParent">Parent Transaction Id </label>
                                 <input type="text" className="form-control" id="transIdParent" 
                                     name="transIdParent" aria-describedby="emailHelp"
-                                    value={this.state.transIdParent} placeholder="Enter Airport"
+                                    value={this.state.transIdParent} placeholder="Enter Parent Transaction Id"
                                     onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="aircraftId">Aircraft</label>
                                 <select className="form-control" id="aircraftId" 
                                     name="aircraftId" aria-describedby="emailHelp" 
-                                    value={this.state.aircraftId} placeholder="Enter Airport"
+                                    value={this.state.aircraftId} placeholder="Enter Aircraft"
                                     onChange={this.handleChange} >
                                         <option value="">---select---</option>
                                         {
@@ -67,7 +67,7 @@ class AddRevTransaction extends React.Component {
                                 <label htmlFor="quantity">Quantity</label>
                                 <input type="number" className="form-control" id="quantity" 
                                     name="quantity" aria-describedby="emailHelp" 
-                                    value={this.state.quantity} placeholder="Enter Airport" 
+                                    value={this.state.quantity} placeholder="Enter quantity" 
                                     onChange={this.handleChange} required/>
                             </div>
 

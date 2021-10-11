@@ -51,13 +51,13 @@ class Login extends React.Component {
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group myinput">
-                        <input type="text" className="form-control" id="airportName" 
+                        <input type="text" className="form-control" id="userid" 
                             aria-describedby="emailHelp" 
                             placeholder="Enter UserId"
                             name="userid" value={this.state.email} onChange={this.onEmailChange} />
                     </div>
                     <div className="form-group myinput">
-                        <input type="password" className="form-control" id="airportName" 
+                        <input type="password" className="form-control" id="password" 
                             aria-describedby="emailHelp" 
                             placeholder="Enter Password"
                             name="password" value={this.state.password} onChange={this.onPasswordChange} />
