@@ -5,7 +5,7 @@ const getToken = function (user) {
   let jwtSecretKey = process.env.APP_SECRET;
     let data = {
         time: Date(),
-        userId: user.userid,
+        userId: user.user_id,
     }
     const token = jwt.sign(data, jwtSecretKey);
     return token;

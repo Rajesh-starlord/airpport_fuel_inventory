@@ -11,11 +11,11 @@ class UserController {
         try {
             const userDetails = req.body;
             const validResp = validator.validateUserModel(userDetails);
-            if (validResp.error === null) {
+            if (!validResp.error) {
                 const resp = await userService.authenticateUser(userDetails.userid, userDetails.password);
                 if (resp && resp.length && typeof resp != 'string') {
                     let user = resp[0];
-                    user = {...user,token:getToken()};
+                    user = {...user,token:getToken(user)};
                     res.send(new HttpResponse('success', user));
                 } else {
                     res.send(new HttpResponse('failed', resp));
@@ -25,7 +25,7 @@ class UserController {
             }
         } catch (error) {
             console.log(error);
-            res.send(new HttpResponse('failed', resp));
+            res.send(new HttpResponse('failed', {}));
         }
     }
 }
