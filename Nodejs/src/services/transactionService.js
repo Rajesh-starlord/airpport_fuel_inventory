@@ -56,9 +56,13 @@ class TransactionService {
                 values: [transaction_id, data.transactionType, data.airportId, data.aircraftId, data.quantity]
             }
             const result = await dbService.executeUpdate(query);
-            console.log(result);
-            resp.message = 'success';
-            resp.data = { ...data, transaction_id };
+            if (result.affectedRows > 0) {
+                resp.message = 'success';
+                resp.data = { ...data, transaction_id };
+            } else {
+                resp.message = 'failed';
+                resp.data = data;
+            }
         } catch (error) {
             console.log(error);
             resp.message = 'failed';
@@ -80,9 +84,13 @@ class TransactionService {
                 values: [transaction_id, data.transactionType, data.airportId, data.aircraftId, data.quantity, data.transIdParent]
             }
             const result = await dbService.executeUpdate(query);
-            console.log(result);
-            resp.message = 'success';
-            resp.data = { ...data, transaction_id };
+            if (result.affectedRows > 0) {
+                resp.message = 'success';
+                resp.data = { ...data, transaction_id };
+            } else {
+                resp.message = 'failed';
+                resp.data = data;
+            }
         } catch (error) {
             console.log(error);
             resp.message = 'failed';
@@ -104,13 +112,8 @@ class TransactionService {
             }
             const result = await dbService.executeUpdate(query);
             console.log(result);
-            if (result.affectedRows > 0) {
-                resp.message = 'success';
-                resp.data = {};
-            } else {
-                resp.message = 'failed';
-                resp.data = {};
-            }
+            resp.message = 'success';
+            resp.data = {};
         } catch (error) {
             console.log(error);
             resp.message = 'failed';
