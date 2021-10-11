@@ -43,6 +43,7 @@ class Login extends React.Component {
 
     render() {
         return (
+            <div className="login-container">
             <div className="wrapper fadeInDown">
                 <div id="formContent">
                 <div className="fadeIn first" style={{marginTop:'10px'}}>
@@ -65,6 +66,7 @@ class Login extends React.Component {
                 </form>
                 <div className={`ui error message ${!this.state.isError ? 'hide' : ''}`}>{this.state.error}</div>
             </div>
+        </div>
         </div>
         )
     }
