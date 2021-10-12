@@ -47,7 +47,6 @@ class ReportService {
                     reportData.push(obj);
                 }
             }
-            console.log(reportData);
             resp.message = 'success';
             resp.data = reportData;
         } catch (error) {

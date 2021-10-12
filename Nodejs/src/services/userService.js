@@ -5,7 +5,7 @@ class UserService{
         let resp = {};
         try {
             const query = {
-                text:'select * from users where email = ? and password = ?',
+                text:'select * from USERS where email = ? and password = ?',
                 values:[email,password]
             }
             resp = await dbService.execute(query);

@@ -6,7 +6,7 @@ const reportService = new ReportService();
 class ReportController {
     async getAirportSummaryReport(req, res) {
         try {
-            const resp = await reportService.getAllAirports();
+            const resp = await reportService.getAirportSummaryReport();
             if (resp.message === 'success') {
                 res.send(new HttpResponse('success', resp));
             } else {
@@ -20,7 +20,7 @@ class ReportController {
 
     async getFuelCosumptionRep(req, res) {
         try {
-            const resp = await reportService.getAllAirports();
+            const resp = await reportService.getFuelCosumptionRep();
             if (resp.message === 'success') {
                 res.send(new HttpResponse('success', resp));
             } else {

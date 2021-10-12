@@ -8,19 +8,19 @@ const Header = () => {
             <div className="list-group list-group-flush my-3">
                 <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><i className="fas fa-tachometer-alt me-2" />Dashboard</Link>
                 <Link to='/admin/initialize' className="list-group-item list-group-item-action bg-transparent second-text fw-bold" >
-                    <i className="fas fa-project-diagram me-2" />Initialize
+                    <i className="fas fa-play-circle" />Initialize
                 </Link>
                 <Link to='/admin/airport' className="list-group-item list-group-item-action bg-transparent second-text fw-bold" >
-                    <i className="fas fa-project-diagram me-2" />Airport
+                    <i className="fas fa-plane" /> Airport
                 </Link>
                 <Link to='/admin/aircraft' className="list-group-item list-group-item-action bg-transparent second-text fw-bold" >
-                    <i className="fas fa-project-diagram me-2" />Aircraft
+                <i className="fas fa-fighter-jet"></i>Aircraft
                 </Link>
                 <Link to='/admin/transaction' className="list-group-item list-group-item-action bg-transparent second-text fw-bold" >
-                    <i className="fas fa-project-diagram me-2" />Transaction
+                    <i className="fas fa-dollar-sign" />Transaction
                 </Link>
                 <Link to='/admin/reports' className="list-group-item list-group-item-action bg-transparent second-text fw-bold" >
-                    <i className="fas fa-project-diagram me-2" />Reports
+                    <i className="fas fa-file" />Reports
                 </Link>
             </div>
         </div>

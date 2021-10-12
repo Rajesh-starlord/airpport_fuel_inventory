@@ -24,7 +24,7 @@ class AircraftController {
         try {
             const aircraftData = req.body;
             const validResp = validator.validateAircraftModel(aircraftData);
-            if (validResp.error === null) {
+            if (!validResp.error) {
                 const resp = await aircraftService.addNewAircraft(aircraftData);
                 if (resp.message === 'success') {
                     res.send(new HttpResponse('success', resp));
@@ -32,7 +32,7 @@ class AircraftController {
                     res.send(new HttpResponse('failed', resp));
                 }
             }else{
-                res.status(400).send(new HttpResponse('failed', { error: validResp.error }));
+                res.status(400).send(new HttpResponse('failed', { error: validResp.error.details }));
             }
         } catch (error) {
             console.log(error);

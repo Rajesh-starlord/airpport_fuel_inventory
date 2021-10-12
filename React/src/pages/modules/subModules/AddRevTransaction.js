@@ -73,7 +73,7 @@ class AddRevTransaction extends React.Component {
 
                             <div className="form-group form-check">
                             </div>
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary" style={{margin: '5px'}}>Submit</button>
                             <button type="reset" className="btn btn-success">Reset</button>
                         </div>
                     </form>

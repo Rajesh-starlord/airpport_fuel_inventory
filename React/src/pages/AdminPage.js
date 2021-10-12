@@ -3,15 +3,6 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 
 class AdminPage extends  React.Component {
-    componentDidMount(){
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-        if(toggleButton){
-            toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-            };
-        }
-    }
     render(){
         return (
             <div className="d-flex" id="wrapper">

@@ -1,5 +1,6 @@
 import React from "react";
-import { useAlert } from "react-alert";
+//import { useAlert } from "react-alert";
+import swal from 'sweetalert2';
 
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
@@ -8,37 +9,76 @@ import AddTransaction from "./subModules/AddTransaction";
 import AddRevTransaction from "./subModules/AddRevTransaction";
 
 const TransactionModule = () => {
-    const alert = useAlert();
+    //const alert = useAlert();
     const saveTransaction = data => {
-        console.log(data);
-        console.log('add transaction');
-        axios.post('/transactions/addTrans',data).then(resp=>{
+        swal.showLoading();
+        axios.post('/transactions/addTrans', data).then(resp => {
             console.log(resp);
             let response = resp.data;
-            if(response.status === 'SUCCESS'){
-                alert.show('Success');
-            }else{
-                alert.show('Failed');
+            if (response.status === 'SUCCESS') {
+                //alert.show('Success');
+                swal.close();
+                swal.fire({
+                    title: 'Success',
+                    text: 'New Transaction Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'cancel'
+                })
+            } else {
+                //alert.show('Failed');
+                swal.close();
+                swal.fire({
+                    title: 'Failed',
+                    text: 'Oops ! something went wrong!',
+                    icon: 'error',
+                    confirmButtonText: 'cancel'
+                })
             }
-        }).catch(err=>{
+        }).catch(err => {
             console.log('failed');
-            alert.show('failed');
+            //alert.show('failed');
+            swal.close();
+            swal.fire({
+                title: 'Failed',
+                text: 'Oops ! something went wrong!',
+                icon: 'error',
+                confirmButtonText: 'cancel'
+            })
         });
     }
     const saveRevTransaction = (data) => {
-        console.log(data);
-        console.log('add reverse transaction');
-        axios.post('/transactions/addReverseTransaction',data).then(resp=>{
-            console.log(resp);
+        swal.showLoading();
+        axios.post('/transactions/addReverseTransaction', data).then(resp => {
             let response = resp.data;
-            if(response.status === 'SUCCESS'){
-                alert.show('Success');
-            }else{
-                alert.show('Failed');
+            if (response.status === 'SUCCESS') {
+                //alert.show('Success');
+                swal.close();
+                swal.fire({
+                    title: 'Success',
+                    text: 'New Reverse Transaction Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'cancel'
+                })
+            } else {
+                //alert.show('Failed');
+                swal.close();
+                swal.fire({
+                    title: 'Failed',
+                    text: 'Oops ! something went wrong!',
+                    icon: 'error',
+                    confirmButtonText: 'cancel'
+                })
             }
-        }).catch(err=>{
+        }).catch(err => {
             console.log('failed');
-            alert.show('failed')
+            //alert.show('failed')
+            swal.close();
+            swal.fire({
+                title: 'Failed',
+                text: 'Oops ! something went wrong!',
+                icon: 'error',
+                confirmButtonText: 'cancel'
+            })
         });
     }
 
@@ -48,6 +88,7 @@ const TransactionModule = () => {
             <div id="page-content-wrapper">
                 <Navbar />
                 <div className="container-fluid px-4">
+                    <div className="component-container"> 
                     <div className="row">
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item" role="presentation">
@@ -65,6 +106,7 @@ const TransactionModule = () => {
                         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <AddRevTransaction handleSubmit={saveRevTransaction}/>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

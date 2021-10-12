@@ -16,6 +16,5 @@ module.exports = ErrorLogger = (err) => {
     if (err.sql !== undefined) {
         mysqlError.sql = err.sql;
     }
-    console.log(mysqlError);
     return mysqlError;
 }

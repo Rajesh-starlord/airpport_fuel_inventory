@@ -8,7 +8,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+        <nav className="navbar navbar-expand-lg navbar-light  py-4 px-4" style={{marginBottom:'25px',backgroundColor:'white'}}>
             <div className="d-flex align-items-center">
                 <i className="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle" />
                 <h2 className="fs-2 m-0">Dashboard</h2>

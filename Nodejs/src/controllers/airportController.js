@@ -24,7 +24,7 @@ class AirportController {
         try {
             const airportData = req.body;
             const validResp = validator.validateAirportModel(airportData);
-            if (validResp.error === null) {
+            if (!validResp.error) {
                 const resp = await airportService.addNewAirport(airportData);
                 if (resp.message === 'success') {
                     res.send(new HttpResponse('success', resp));

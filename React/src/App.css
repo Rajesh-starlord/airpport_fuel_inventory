@@ -48,3 +48,22 @@
     padding-right: 25% !important;
     margin-top: 25% !important;
 }
+
+.component-container{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 19px 50px 0 rgb(0 0 0 / 30%);
+}
+
+.report-head{
+  text-align: 'center'!important;
+  margin-left: '2px'!important;
+  background: 'wheat'!important;
+  margin-bottom: '5px'!important;
+  height: '30px'!important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.fas{
+  margin-right: 10px !important;
+}

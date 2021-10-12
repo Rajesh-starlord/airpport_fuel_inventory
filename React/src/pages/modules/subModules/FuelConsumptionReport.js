@@ -27,7 +27,7 @@ class FuelConsumptionReport extends React.Component {
                     { this.state.DataList.length > 0 ?  this.state.DataList.map(data=> 
                         <div>
                             <div>
-                                <div className="repor-thead" style={{textAlign: 'center',marginLeft: '2px',background: 'wheat',marginBottom: '5px',height: '30px'}} key={data.airport_id}>AIRPORT: {data.airport_name}</div>
+                                <div className="report-head" style={{textAlign: 'center',marginLeft: '2px',background: 'wheat',marginBottom: '5px',height: '30px'}} key={data.airport_id}>AIRPORT: {data.airport_name}</div>
                             </div>
                             <table className="table bg-white rounded shadow-sm  table-hover ">
                             <thead>
@@ -46,7 +46,7 @@ class FuelConsumptionReport extends React.Component {
                                         <td>{trans.quantity}</td>
                                         <td>{trans.aircraft_no}</td>
                                     </tr>
-                                ):  <tr><td colspan="4" style={{textAlign:'center'}}>No Transactions Found</td></tr>}
+                                ):  <tr><td colSpan="4" style={{textAlign:'center'}}>No Transactions Found</td></tr>}
                             </tbody>
                         </table>
                         </div>

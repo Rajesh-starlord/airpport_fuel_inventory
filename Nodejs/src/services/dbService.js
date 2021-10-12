@@ -33,7 +33,7 @@ const dbService = {
         return new Promise((resolve, reject) => {
             let connection = mysql.createConnection(dbConfig);
             try {
-                mysql.createConnection(dbConfig).connect((err) => {
+                connection.connect((err) => {
                     if (err) {
                         reject(err);
                     } else {
@@ -42,7 +42,6 @@ const dbService = {
                 });
                 connection.query(query.text, query.values || [], (err, result) => {
                     if (err) {
-                        ErrorLogger(err);
                         reject(ErrorLogger(err));
                     };
                     resolve(result);

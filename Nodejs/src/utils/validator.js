@@ -48,7 +48,7 @@ class Validator {
         const revtransSchema = Joi.object().keys({
             aircraftId:Joi.string().allow(null).allow('').optional(),
             airportId:Joi.string().optional(),
-            transactionType:Joi.string().required(),
+            transactionType:Joi.string().optional(),
             transIdParent:Joi.string().required(),
             quantity:Joi.number().required(),
         });
